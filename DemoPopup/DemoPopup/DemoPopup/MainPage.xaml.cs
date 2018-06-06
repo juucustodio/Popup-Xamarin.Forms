@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,10 @@ namespace DemoPopup
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void OpenPopup(object sender, EventArgs e)
+        {
+            PopupNavigation.PushAsync(new PopupView());
+        }
+    }
 }
